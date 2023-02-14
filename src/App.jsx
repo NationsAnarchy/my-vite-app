@@ -5,6 +5,11 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
+  // function handleClick() {
+  //   setCount(count + 6);
+  //   setCount(count + 1);
+  // }
+
   return (
     <div className="App">
       <div>
@@ -17,7 +22,16 @@ function App() {
       </div>
       <h1>Vite + React testing with Vercel</h1>
       <div className="card">
-        <button type="button" onClick={() => setCount((_count) => _count + 1)}>
+        {/* <button type="button" onClick={handleClick}>
+          count is {count}
+        </button> */}
+        <button
+          type="button"
+          onClick={() => {
+            setCount(count + 1);
+            setCount(count + 1);
+          }}
+        >
           count is {count}
         </button>
         <p>
