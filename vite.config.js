@@ -9,6 +9,21 @@ export default defineConfig({
     react(),
     VitePWA({
       injectRegister: "auto",
+      includeAssets: ["android-chrome-512x512.png"],
+      manifest: {
+        name: "My PWA Application",
+        short_name: "My PWA",
+        description: "Me testing something",
+        theme_color: "#000",
+        icons: [
+          {
+            src: "/android-chrome-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "any",
+          },
+        ],
+      },
     }),
   ],
 });
